@@ -1,8 +1,5 @@
-/* 🎨 Generation Reboot 50 – CSS */
+/* 🎨 Generation Reboot 50 – Responsiv CSS med hero-fade och mobilmeny */
 
-/* =============================
-   Färgpalett
-   ============================= */
 :root {
   --primary: #3E7D7C;
   --secondary: #DCD2C8;
@@ -51,6 +48,7 @@ h1, h2, h3 {
 .logo {
   height: 48px;
   width: auto;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
 }
 
 .menu {
@@ -85,28 +83,108 @@ h1, h2, h3 {
 }
 
 /* =============================
-   Hero Section
+   Mobilmeny
+   ============================= */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  .menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .btn-accent {
+    display: none;
+  }
+}
+
+/* =============================
+   Hero Section med fade + blur
    ============================= */
 .hero {
   position: relative;
   height: 90vh;
-  background: url('hero1.png') center/cover no-repeat;
-  animation: heroFade 24s infinite;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--text);
+}
+
+.hero-images {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px);
+  opacity: 0;
+  animation: fadeCycle 24s infinite;
+  transition: filter 2s ease;
+}
+
+.hero-img:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-img:nth-child(2) {
+  animation-delay: 8s;
+}
+.hero-img:nth-child(3) {
+  animation-delay: 16s;
+}
+
+@keyframes fadeCycle {
+  0% { opacity: 0; filter: blur(10px); }
+  5% { opacity: 1; filter: blur(0); }
+  30% { opacity: 1; filter: blur(0); }
+  35% { opacity: 0; filter: blur(10px); }
+  100% { opacity: 0; }
 }
 
 .hero-overlay {
   background: rgba(247, 247, 247, 0.7);
   padding: 3rem;
   border-radius: 16px;
+  z-index: 10;
+  position: relative;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   color: var(--primary);
 }
 
@@ -127,13 +205,6 @@ h1, h2, h3 {
 
 .btn-primary:hover {
   background-color: var(--accent);
-}
-
-@keyframes heroFade {
-  0% { background-image: url('hero1.png'); }
-  33% { background-image: url('hero2.png'); }
-  66% { background-image: url('hero3.png'); }
-  100% { background-image: url('hero1.png'); }
 }
 
 /* =============================
