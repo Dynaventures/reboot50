@@ -1,39 +1,40 @@
-/* 🎨 Generation Reboot 50 – Split hero layout */
-
 :root {
   --primary: #3E7D7C;
   --secondary: #DCD2C8;
   --accent: #EBA45E;
   --background: #F7F7F7;
-  --text: #333333;
+  --text: #222222;
 }
 
 /* ===== Bas ===== */
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text);
   background-color: var(--background);
-  line-height: 1.8;
+  line-height: 1.9;
+  font-size: 18px;
 }
 
-h1, h2, h3 {
-  font-family: 'Inter', sans-serif;
+/* ===== Rubriker ===== */
+h1, h2 {
   color: var(--primary);
-  margin-bottom: 0.6em;
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.4rem; }
 
 p {
-  max-width: 680px;
-  margin: 0 auto 1.5rem auto;
-  word-wrap: break-word;
+  max-width: 720px;
+  margin: 0 auto 1.8rem auto;
 }
 
 /* ===== Header ===== */
 .header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
@@ -63,115 +64,129 @@ p {
   transition: color 0.2s ease;
 }
 
-.menu a:hover {
-  color: var(--primary);
-}
+.menu a:hover { color: var(--primary); }
 
 .btn-accent {
   background-color: var(--accent);
   color: white;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s ease;
 }
 
-.btn-accent:hover {
-  background-color: var(--primary);
-}
+.btn-accent:hover { background-color: var(--primary); }
 
-/* ===== Split Hero Layout ===== */
+/* ===== Hero Split Layout ===== */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80vh;
-  margin-top: 70px;
+  min-height: 85vh;
+  margin-top: 80px;
 }
 
-.hero.right .hero-image {
-  order: 2;
-}
-.hero.left .hero-image {
-  order: 1;
-}
+.hero.left .hero-image { order: 1; }
+.hero.left .hero-overlay { order: 2; }
+
+.hero.right .hero-overlay { order: 1; }
+.hero.right .hero-image { order: 2; }
 
 .hero-overlay {
   width: 50%;
   background-color: var(--background);
-  padding: 3rem;
+  padding: 5rem;
   border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   text-align: left;
   box-sizing: border-box;
 }
 
 .hero-image {
   width: 50%;
-  height: 80vh;
+  height: 85vh;
   overflow: hidden;
+  position: relative;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
 }
 
-.hero h1, .hero h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  line-height: 1.3;
+/* Gradients för separation */
+.gradient-right::after,
+.gradient-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  margin: 1rem 0 2rem 0;
+.gradient-right::after {
+  background: linear-gradient(to left, var(--background) 0%, rgba(247,247,247,0) 60%);
 }
 
-/* Hero logo box */
+.gradient-left::after {
+  background: linear-gradient(to right, var(--background) 0%, rgba(247,247,247,0) 60%);
+}
+
+/* Hero textinnehåll */
+.hero-overlay h1, .hero-overlay h2 {
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+
+.hero-overlay p {
+  margin: 1.5rem 0 2.5rem 0;
+  line-height: 1.9;
+}
+
 .hero-logo-box {
   display: inline-block;
   background-color: var(--background);
   padding: 1rem 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-bottom: 1rem;
 }
 
 .hero-logo-box img {
   height: 160px;
   width: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 /* ===== Buttons ===== */
 .btn-primary {
   background-color: var(--primary);
   color: white;
-  padding: 0.8rem 1.8rem;
+  padding: 1rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: var(--accent);
-}
+.btn-primary:hover { background-color: var(--accent); }
 
-/* ===== Sections ===== */
+/* ===== Sektioner ===== */
 .section {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
 }
 
-.bg-secondary {
-  background-color: var(--secondary);
+.bg-secondary { background-color: var(--secondary); }
+
+.program-list {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+  margin: 2rem auto;
+  max-width: 600px;
 }
 
 /* ===== Footer ===== */
@@ -179,30 +194,8 @@ p {
   background-color: var(--primary);
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
+  padding: 2.5rem 1rem;
+  font-size: 1rem;
 }
 
-/* ===== Mobil ===== */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-  }
-  .hero-image, .hero-overlay {
-    width: 100%;
-  }
-  .hero-overlay {
-    border-radius: 0;
-    padding: 2rem 1.5rem;
-    text-align: center;
-  }
-  .hero-image {
-    height: 40vh;
-  }
-  .hero h1, .hero h2 {
-    font-size: 1.8rem;
-  }
-  .hero-logo-box img {
-    height: 120px;
-  }
-}
+/* ===== M*
