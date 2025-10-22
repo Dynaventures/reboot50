@@ -1,4 +1,4 @@
-/* 🎨 Generation Reboot 50 – Responsiv CSS med hero-fade och mobilmeny */
+/* 🎨 Generation Reboot 50 – Stabil version utan animationer */
 
 :root {
   --primary: #3E7D7C;
@@ -8,18 +8,27 @@
   --text: #333333;
 }
 
+/* =============================
+   Bas
+   ============================= */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   color: var(--text);
   background-color: var(--background);
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 h1, h2, h3 {
   font-family: 'Inter', sans-serif;
   color: var(--primary);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
+}
+
+p {
+  max-width: 680px;
+  margin: 0 auto 1.5rem auto;
+  word-wrap: break-word;
 }
 
 /* =============================
@@ -30,7 +39,7 @@ h1, h2, h3 {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   z-index: 1000;
@@ -43,12 +52,6 @@ h1, h2, h3 {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-}
-
-.logo {
-  height: 48px;
-  width: auto;
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
 }
 
 .menu {
@@ -129,70 +132,75 @@ h1, h2, h3 {
 }
 
 /* =============================
-   Hero Section med fade + blur
+   Hero Section (statiskt, contain)
    ============================= */
 .hero {
   position: relative;
-  height: 90vh;
+  height: 75vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 70px; /* så headern inte täcker */
 }
 
 .hero-images {
   position: absolute;
   inset: 0;
+  background-color: var(--background);
 }
 
 .hero-img {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: blur(10px);
-  opacity: 0;
-  animation: fadeCycle 24s infinite;
-  transition: filter 2s ease;
-}
-
-.hero-img:nth-child(1) {
-  animation-delay: 0s;
-}
-.hero-img:nth-child(2) {
-  animation-delay: 8s;
-}
-.hero-img:nth-child(3) {
-  animation-delay: 16s;
-}
-
-@keyframes fadeCycle {
-  0% { opacity: 0; filter: blur(10px); }
-  5% { opacity: 1; filter: blur(0); }
-  30% { opacity: 1; filter: blur(0); }
-  35% { opacity: 0; filter: blur(10px); }
-  100% { opacity: 0; }
+  object-fit: contain;
+  object-position: center center;
+  opacity: 1;
 }
 
 .hero-overlay {
-  background: rgba(247, 247, 247, 0.7);
-  padding: 3rem;
+  background: rgba(247, 247, 247, 0.75);
+  padding: 3rem 2rem;
   border-radius: 16px;
   z-index: 10;
   position: relative;
+  max-width: 800px;
+  margin: 0 1rem;
 }
 
-.hero h1 {
-  font-size: 2.6rem;
-  color: var(--primary);
+.hero h1, .hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin: 1rem 0 2rem 0;
+  font-size: 1.1rem;
+  margin: 1rem auto 2rem auto;
 }
 
+/* Hero logo-box */
+.hero-logo-box {
+  display: inline-block;
+  background-color: var(--background);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+}
+
+.hero-logo-box img {
+  height: 160px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =============================
+   Buttons
+   ============================= */
 .btn-primary {
   background-color: var(--primary);
   color: white;
@@ -213,7 +221,7 @@ h1, h2, h3 {
 .section {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
@@ -230,4 +238,25 @@ h1, h2, h3 {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
+}
+
+/* =============================
+   Responsivitet
+   ============================= */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1, .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-logo-box img {
+    height: 120px;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
 }
