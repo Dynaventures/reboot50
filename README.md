@@ -1,2 +1,2 @@
 # reboot50
-Hemsida för subdomänen rebott50 under fragsheet.com
+Hemsida för subdomänen reboot50 under fragsheet.com
