@@ -1,4 +1,4 @@
-/* 🎨 Generation Reboot 50 – Stabil version utan animationer */
+/* 🎨 Generation Reboot 50 – Split hero layout */
 
 :root {
   --primary: #3E7D7C;
@@ -8,9 +8,7 @@
   --text: #333333;
 }
 
-/* =============================
-   Bas
-   ============================= */
+/* ===== Bas ===== */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -31,9 +29,7 @@ p {
   word-wrap: break-word;
 }
 
-/* =============================
-   Header & Navigation
-   ============================= */
+/* ===== Header ===== */
 .header {
   position: fixed;
   top: 0;
@@ -85,103 +81,56 @@ p {
   background-color: var(--primary);
 }
 
-/* =============================
-   Mobilmeny
-   ============================= */
-.menu-toggle {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: var(--text);
-  border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  }
-  .menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-  }
-  .hamburger {
-    display: flex;
-  }
-  .btn-accent {
-    display: none;
-  }
-}
-
-/* =============================
-   Hero Section (statiskt, contain)
-   ============================= */
+/* ===== Split Hero Layout ===== */
 .hero {
-  position: relative;
-  height: 75vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 70px; /* så headern inte täcker */
+  justify-content: space-between;
+  min-height: 80vh;
+  margin-top: 70px;
 }
 
-.hero-images {
-  position: absolute;
-  inset: 0;
-  background-color: var(--background);
+.hero.right .hero-image {
+  order: 2;
 }
-
-.hero-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center center;
-  opacity: 1;
+.hero.left .hero-image {
+  order: 1;
 }
 
 .hero-overlay {
-  background: rgba(247, 247, 247, 0.75);
-  padding: 3rem 2rem;
+  width: 50%;
+  background-color: var(--background);
+  padding: 3rem;
   border-radius: 16px;
-  z-index: 10;
-  position: relative;
-  max-width: 800px;
-  margin: 0 1rem;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.hero-image {
+  width: 50%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .hero h1, .hero h2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   line-height: 1.3;
 }
 
 .hero p {
   font-size: 1.1rem;
-  margin: 1rem auto 2rem auto;
+  margin: 1rem 0 2rem 0;
 }
 
-/* Hero logo-box */
+/* Hero logo box */
 .hero-logo-box {
   display: inline-block;
   background-color: var(--background);
@@ -198,9 +147,7 @@ p {
   margin: 0 auto;
 }
 
-/* =============================
-   Buttons
-   ============================= */
+/* ===== Buttons ===== */
 .btn-primary {
   background-color: var(--primary);
   color: white;
@@ -215,9 +162,7 @@ p {
   background-color: var(--accent);
 }
 
-/* =============================
-   Sections
-   ============================= */
+/* ===== Sections ===== */
 .section {
   max-width: 1000px;
   margin: 0 auto;
@@ -229,9 +174,7 @@ p {
   background-color: var(--secondary);
 }
 
-/* =============================
-   Footer
-   ============================= */
+/* ===== Footer ===== */
 .footer {
   background-color: var(--primary);
   color: white;
@@ -240,23 +183,26 @@ p {
   font-size: 0.9rem;
 }
 
-/* =============================
-   Responsivitet
-   ============================= */
-@media (max-width: 768px) {
+/* ===== Mobil ===== */
+@media (max-width: 900px) {
   .hero {
-    height: 60vh;
+    flex-direction: column;
   }
-
+  .hero-image, .hero-overlay {
+    width: 100%;
+  }
+  .hero-overlay {
+    border-radius: 0;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .hero-image {
+    height: 40vh;
+  }
   .hero h1, .hero h2 {
     font-size: 1.8rem;
   }
-
   .hero-logo-box img {
     height: 120px;
-  }
-
-  .section {
-    padding: 3rem 1.5rem;
   }
 }
