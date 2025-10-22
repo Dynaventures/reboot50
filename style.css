@@ -32,6 +32,11 @@ p {
 }
 
 /* ===== Header ===== */
+
+.menu-toggle {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
