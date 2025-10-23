@@ -543,11 +543,16 @@ p {
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   vertical-align: middle;
   margin-right: 8px;
   stroke: var(--primary);
   stroke-width: 2;
   fill: none;
+}
+
+h2 svg.icon {
+  position: relative;
+  top: -2px;
 }
