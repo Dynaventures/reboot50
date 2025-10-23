@@ -291,16 +291,23 @@ p {
   font-weight: 600;
 }
 
-/* ===== Responsive layout (mobil) ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE FIX (ENDA VERSIONEN) ===== */
+@media (max-width: 900px) {
+
+  /* HERO: växlar till vertikal layout */
   .hero {
-    flex-direction: column !important;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    margin-top: 70px;
   }
 
-  .hero.left .hero-image,
-  .hero.right .hero-image {
-    order: -1; /* Bilden visas ovanför texten */
+  /* Bild alltid överst */
+  .hero-image {
+    order: -1;
+    width: 100%;
+    height: auto;
   }
 
   .hero-image img {
@@ -309,22 +316,53 @@ p {
     object-fit: cover;
   }
 
+  /* Textblock */
   .hero-overlay {
+    width: 100%;
+    background-color: var(--background);
     padding: 2rem 1.5rem;
+    box-shadow: none;
+    border-radius: 0;
+    text-align: center;
   }
 
-  h1, h2 {
+  /* Logotyp i hero */
+  .hero-logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .hero-logo-box img {
+    height: 120px;
+    width: auto;
+  }
+
+  .hero-overlay h1,
+  .hero-overlay h2 {
     font-size: 1.8rem;
+    margin: 1rem auto;
     line-height: 1.3;
   }
 
-  p, li {
+  .hero-overlay p {
     font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto 1.5rem auto;
     line-height: 1.6;
   }
 
+  /* Sektioner */
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Navigation */
   .nav {
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
   }
 
   .menu {
@@ -340,48 +378,28 @@ p {
     top: 60px;
     left: 0;
     padding: 1rem 0;
+    z-index: 999;
   }
 
   .menu li {
     margin: 0.5rem 0;
+    text-align: center;
   }
 
   .btn-accent {
     margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
   }
-}
 
-/* ===== Mobilanpassning för logotypen i hero ===== */
-@media (max-width: 768px) {
-  .hero-logo-box {
-    display: flex;
-    justify-content: center;
+  /* Team-section: en per rad */
+  .team-grid {
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 1.5rem;
   }
 
-  .hero-logo-box img {
-    height: 120px;
-    width: auto;
-  }
-
-  /* Justerar hero-texten under logotypen */
-  .hero-overlay h1 {
-    font-size: 1.6rem;
-    margin-top: 0.5rem;
-  }
-
-  .hero-overlay p {
-    font-size: 1rem;
-    max-width: 90%;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  /* Ger lite extra luft under CTA-knappar */
-  .btn-primary, .btn-accent {
-    margin-top: 1rem;
-    font-size: 1rem;
-    padding: 0.7rem 1.5rem;
+  .team-member {
+    width: 80%;
+    margin-bottom: 2rem;
   }
 }
