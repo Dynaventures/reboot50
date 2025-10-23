@@ -47,6 +47,11 @@ p {
   z-index: 1000;
 }
 
+.nav-logo {
+  height: 48px;
+  width: auto;
+}
+
 .nav {
   max-width: 1200px;
   margin: 0 auto;
