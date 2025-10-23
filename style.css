@@ -509,3 +509,35 @@ p {
     padding: 1.2rem;
   }
 }
+
+/* ===== Programmet-tabell ===== */
+.program-table {
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.program-table .row {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  line-height: 1.6;
+}
+
+.program-table strong {
+  color: var(--primary);
+}
+
+.program-table em {
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .program-table .row {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
