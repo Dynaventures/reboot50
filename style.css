@@ -291,6 +291,69 @@ p {
   font-weight: 600;
 }
 
+/* ===== TABLET OPTIMIZATION (≤1200px) ===== */
+@media (max-width: 1200px) {
+
+  /* Hero: mindre padding och smidigare bredd */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .hero-overlay {
+    padding: 2rem;
+  }
+
+  .hero-image img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .hero.left .hero-image,
+  .hero.right .hero-image {
+    width: 50%;
+  }
+
+  .hero.left .hero-overlay,
+  .hero.right .hero-overlay {
+    width: 50%;
+  }
+
+  .hero-overlay h1,
+  .hero-overlay h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  /* Navigationsjusteringar */
+  .nav {
+    padding: 1rem 2rem;
+  }
+
+  .menu li {
+    margin: 0 0.8rem;
+  }
+
+  /* Team cards: två per rad */
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .team-member {
+    width: 40%;
+  }
+}
+
+
 /* ===== RESPONSIVE FIX (ENDA VERSIONEN) ===== */
 @media (max-width: 900px) {
 
