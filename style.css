@@ -1,22 +1,35 @@
 /* =============================
    GENERATION REBOOT BASE STYLES
 ============================= */
+:root {
+  --primary: #3E7D7C;
+  --accent: #EBA45E;
+  --light-bg: #F7F7F7;
+  --secondary-bg: #DCD2C8;
+  --text: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  color: #333;
-  background-color: #F7F7F7;
+  color: var(--text);
+  background-color: var(--light-bg);
   line-height: 1.6;
 }
 
-/* Header */
+/* =============================
+   HEADER & NAVIGATION
+============================= */
 .header {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 }
 
 .nav {
@@ -24,10 +37,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 2rem;
+  flex-wrap: nowrap;
 }
 
 .nav-logo {
-  height: 40px;
+  height: 44px;
 }
 
 .menu {
@@ -40,36 +54,59 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: #333;
+  color: var(--text);
   font-weight: 500;
+  transition: color 0.3s;
 }
 
 .menu a.active,
 .menu a:hover {
-  color: #3E7D7C;
+  color: var(--primary);
 }
 
 .btn-accent {
-  background-color: #EBA45E;
+  background-color: var(--accent);
   color: #fff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-accent:hover {
   background-color: #d68d45;
 }
 
-/* Hero Sections */
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text);
+  transition: 0.3s;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* =============================
+   HERO SECTIONS
+============================= */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 80vh;
-  position: relative;
   overflow: hidden;
 }
 
@@ -79,7 +116,7 @@ body {
 
 .hero-image {
   flex: 1;
-  overflow: hidden;
+  position: relative;
 }
 
 .hero-image img {
@@ -96,14 +133,15 @@ body {
 
 .hero-overlay h1,
 .hero-overlay h2 {
-  color: #3E7D7C;
-  font-size: 2rem;
+  color: var(--primary);
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
 .hero-overlay p {
   max-width: 600px;
   margin: 0 auto 2rem;
+  font-size: 1.1rem;
 }
 
 .hero-logo-box img {
@@ -111,9 +149,11 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Buttons */
+/* =============================
+   BUTTONS
+============================= */
 .btn-primary {
-  background-color: #3E7D7C;
+  background-color: var(--primary);
   color: white;
   padding: 0.8rem 1.8rem;
   border-radius: 8px;
@@ -123,17 +163,24 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #EBA45E;
+  background-color: var(--accent);
 }
 
-/* Sections */
+/* =============================
+   SECTIONS & TYPOGRAPHY
+============================= */
 .section {
   padding: 4rem 2rem;
   text-align: center;
 }
 
+.section h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
 .bg-secondary {
-  background-color: #DCD2C8;
+  background-color: var(--secondary-bg);
 }
 
 .program-list {
@@ -141,47 +188,173 @@ body {
   padding: 0;
   max-width: 600px;
   margin: 2rem auto;
+  text-align: left;
 }
 
 .program-list li {
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
 }
 
-/* Footer */
+/* Quote Blocks */
+.quote-block {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.quote-block blockquote {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin: 0 auto 1rem;
+  max-width: 700px;
+}
+
+/* Partner Table */
+.partner-table {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.partner-row {
+  background: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.partner-row h3 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.partner-row .amount {
+  font-weight: 700;
+  margin: 0.4rem 0;
+}
+
+.partner-row .desc {
+  font-size: 0.95rem;
+}
+
+.note {
+  max-width: 700px;
+  margin: 2rem auto 0;
+  font-style: italic;
+}
+
+/* =============================
+   CONTACT SECTION
+============================= */
+.section.contact {
+  background-color: var(--light-bg);
+}
+
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  display: inline-block;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   TEAM GRID
+============================= */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  width: 160px;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.team-member .name {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.linkedin {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* =============================
+   FOOTER
+============================= */
 .footer {
-  background-color: #3E7D7C;
+  background-color: var(--primary);
   color: white;
   text-align: center;
   padding: 1.5rem;
   font-size: 0.9rem;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 24px;
-  height: 2px;
-  background-color: #333;
-  transition: 0.3s;
-}
-
-.menu-toggle {
-  display: none;
-}
-
 /* =============================
    RESPONSIVE DESIGN
 ============================= */
 @media (max-width: 900px) {
+
   .nav {
     flex-wrap: wrap;
-    gap: 1rem;
+    padding: 0.75rem 1.2rem;
   }
 
   .hamburger {
@@ -195,6 +368,12 @@ body {
     background-color: #fff;
     border-top: 1px solid #eee;
     padding: 1rem 0;
+    margin-top: 0.5rem;
+  }
+
+  .menu li {
+    text-align: center;
+    margin: 0.5rem 0;
   }
 
   .menu-toggle:checked + .hamburger + .menu {
@@ -202,34 +381,47 @@ body {
   }
 
   .btn-accent {
-    align-self: flex-end;
     order: 3;
+    margin-left: auto;
+    margin-top: 0.5rem;
   }
 
+  /* Hero */
   .hero {
     flex-direction: column;
     text-align: center;
+    min-height: auto;
+  }
+
+  .hero-image img {
+    height: 300px;
+    object-fit: cover;
   }
 
   .hero-overlay {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.2rem;
   }
 
   .hero-overlay h1,
   .hero-overlay h2 {
     font-size: 1.6rem;
-    line-height: 1.35;
   }
 
   .hero-overlay p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
     max-width: 90%;
-    margin: 0 auto 1.5rem;
   }
 
-  .hero-image img {
-    height: 320px;
-    object-fit: cover;
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .team-grid {
+    gap: 1.2rem;
+  }
+
+  .contact-wrapper {
+    padding: 0 1rem;
   }
 }
