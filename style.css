@@ -515,3 +515,67 @@ body {
     text-align: center;
   }
 }
+
+/* =====================================
+   HISTORIER – Daniel (hero-fix)
+===================================== */
+
+/* Cirkulär mask på Daniel-bilden i hero */
+.hero.left.story-hero .hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.hero.left.story-hero .hero-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Textjustering */
+.story-overlay {
+  text-align: left;
+  padding: 3rem 2rem;
+}
+
+.story-overlay h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.story-overlay .tagline {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.story-overlay .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mobiljustering */
+@media (max-width: 768px) {
+  .hero.left.story-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero.left.story-hero .hero-image img {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 1.5rem;
+  }
+
+  .story-overlay {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+}
