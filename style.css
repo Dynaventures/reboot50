@@ -579,3 +579,148 @@ body {
     text-align: center;
   }
 }
+
+/* =====================================
+   PROGRAMSIDAN – Layoutfixar & Ikoner
+===================================== */
+
+/* Gemensam stil för rubriker */
+.section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+}
+
+/* Döljer de gamla inline-SVG:erna */
+.section h2 svg.icon {
+  display: none;
+}
+
+/* Lägg till emoji automatiskt före varje fas */
+.section h2:before {
+  font-size: 1.4rem;
+}
+
+/* Unika emojis per sektion via nth-of-type */
+.section:nth-of-type(3) h2:before { content: "🎯"; }
+.section:nth-of-type(4) h2:before { content: "👥"; }
+.section:nth-of-type(5) h2:before { content: "🧠"; }
+.hero.left h2:before { content: "🎥"; }
+.section:nth-of-type(7) h2:before { content: "🚀"; }
+.section:nth-of-type(8) h2:before { content: "💡"; }
+.section:nth-of-type(9) h2:before { content: "🔧"; }
+.section:nth-of-type(10) h2:before { content: "📈"; }
+
+/* Programtabell snyggt kortlayoutad */
+.program-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  max-width: 750px;
+  margin: 2rem auto;
+}
+
+.program-table .row {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.program-table .row strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.program-table .row em {
+  font-style: normal;
+  color: #777;
+  font-weight: 600;
+}
+
+/* Hover-effekt för premiumkänsla */
+.program-table .row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+  .section h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .program-table {
+    padding: 0 1rem;
+  }
+
+  .program-table .row {
+    font-size: 0.95rem;
+  }
+}
+
+/* =====================================
+   PROGRAMSIDAN – Mini-cards (mål)
+===================================== */
+
+.goal-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.goal-card {
+  flex: 1 1 260px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: all 0.25s ease;
+  border-top: 4px solid var(--primary);
+}
+
+.goal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.goal-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.goal-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 0;
+}
+
+/* Mobiljustering */
+@media (max-width: 768px) {
+  .goal-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .goal-card {
+    width: 90%;
+  }
+}
