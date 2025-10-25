@@ -425,3 +425,93 @@ body {
     padding: 0 1rem;
   }
 }
+
+/* =============================
+   STORY / HISTORIER
+============================= */
+
+.story-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+}
+
+.story-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.story-intro {
+  max-width: 500px;
+  text-align: left;
+}
+
+.story-intro h1 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.story-intro .tagline {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.story-intro .lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.story-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: left;
+}
+
+.story-content p {
+  margin-bottom: 1.2rem;
+}
+
+.story-list {
+  list-style: disc;
+  margin: 1.5rem 2rem;
+}
+
+.quote-block {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.quote-author {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Responsiv anpassning */
+@media (max-width: 768px) {
+  .story-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .story-intro {
+    text-align: center;
+  }
+}
