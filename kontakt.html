@@ -13,14 +13,14 @@
   <!-- Header -->
   <header class="header">
     <nav class="nav">
+      <a href="index.html" class="logo-link">
+        <img src="assets/REBOOT50-logo.png" alt="Reboot 50 logotyp" class="nav-logo">
+      </a>
+
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
       <label for="menu-toggle" class="hamburger">
         <span></span><span></span><span></span>
       </label>
-
-      <a href="index.html" class="logo-link">
-        <img src="assets/REBOOT50-logo.png" alt="Reboot 50 logotyp" class="nav-logo">
-      </a>
 
       <ul class="menu">
         <li><a href="om.html">Om</a></li>
@@ -48,22 +48,24 @@
 
   <!-- Kontaktformulär -->
   <section class="section contact">
-    <form class="contact-form" action="mailto:patrik@fragsheet.com" method="post" enctype="text/plain">
-      <label for="name">Namn</label>
-      <input type="text" id="name" name="Namn" placeholder="Ditt namn" required>
+    <div class="contact-wrapper">
+      <form class="contact-form" action="mailto:patrik@fragsheet.com" method="post" enctype="text/plain">
+        <label for="name">Namn</label>
+        <input type="text" id="name" name="Namn" placeholder="Ditt namn" required>
 
-      <label for="email">E-post</label>
-      <input type="email" id="email" name="E-post" placeholder="din@email.se" required>
+        <label for="email">E-post</label>
+        <input type="email" id="email" name="E-post" placeholder="din@email.se" required>
 
-      <label for="message">Meddelande</label>
-      <textarea id="message" name="Meddelande" rows="6" placeholder="Skriv ditt meddelande här..." required></textarea>
+        <label for="message">Meddelande</label>
+        <textarea id="message" name="Meddelande" rows="6" placeholder="Skriv ditt meddelande här …" required></textarea>
 
-      <button type="submit" class="btn-primary">Skicka meddelande</button>
-    </form>
+        <button type="submit" class="btn-primary">Skicka meddelande</button>
+      </form>
 
-    <div class="contact-info">
-      <p>📧 Eller mejla direkt till: <a href="mailto:patrik@fragsheet.com">patrik@fragsheet.com</a></p>
-      <p>💬 Du kan också boka ett samtal via <a href="https://fantastical.app/patrikhallen-k0QE/crest" target="_blank">den här länken</a>.</p>
+      <div class="contact-info">
+        <p>📧 Eller mejla direkt till: <a href="mailto:patrik@fragsheet.com">patrik@fragsheet.com</a></p>
+        <p>💬 Du kan också boka ett samtal via <a href="https://fantastical.app/patrikhallen-k0QE/crest" target="_blank">den här länken</a>.</p>
+      </div>
     </div>
   </section>
 
@@ -73,4 +75,3 @@
 
 </body>
 </html>
-
