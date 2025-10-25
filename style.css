@@ -724,3 +724,36 @@ body {
     width: 90%;
   }
 }
+
+/* =====================================
+   PROGRAMSIDAN – Layoutfix
+===================================== */
+
+/* Hero clean variant utan 80vh */
+.hero.clean {
+  flex-direction: column;
+  text-align: center;
+  min-height: auto;
+  padding: 4rem 2rem;
+}
+
+.hero-inline {
+  max-width: 700px;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Smalare textyta för läsbarhet */
+.section.narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Fix för bakgrundssektioner */
+.section.bg-secondary {
+  padding: 4rem 2rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
