@@ -3,7 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Generation Reboot 50</title>
+
+  <title>Generation Reboot 50 – Erfarenhet + AI = Sveriges nya kraft</title>
+
+  <meta name="description" content="Generation Reboot 50 hjälper människor 50+ att kombinera erfarenhet och AI. På 30 dagar väcks nyfikenhet, kreativitet och framtidstro till liv – en nationell rörelse för att frigöra kraften i Sveriges mest erfarna generation." />
+  <meta name="keywords" content="Generation Reboot, Reboot 50, AI för 50+, livslångt lärande, omställning, erfarenhet, ålderism, ny karriär, revansch 50+, digital kompetens, GPT, AI coach" />
+  <meta name="author" content="Generation Reboot / DynaVentures" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://reboot50.fragsheet.com/" />
+  <meta property="og:title" content="Generation Reboot 50 – Erfarenhet + AI = Sveriges nya kraft" />
+  <meta property="og:description" content="Ett nationellt program som hjälper människor 50+ att använda AI som turbo på sin erfarenhet. Från stillastående till nystart på 30 dagar." />
+  <meta property="og:image" content="https://reboot50.fragsheet.com/assets/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Generation Reboot 50 – Erfarenhet + AI = Sveriges nya kraft" />
+  <meta name="twitter:description" content="Från stillastående till nystart. Ett initiativ som väcker nyfikenhet och visar vägen till AI-samhället för 50+." />
+  <meta name="twitter:image" content="https://reboot50.fragsheet.com/assets/og-image.jpg" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Generation Reboot 50",
+    "url": "https://reboot50.fragsheet.com/",
+    "logo": "https://reboot50.fragsheet.com/assets/REBOOT50-logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/generation-reboot",
+      "https://reboot50.fragsheet.com/"
+    ],
+    "description": "Generation Reboot 50 hjälper människor över 50 att använda AI som förlängning av sin erfarenhet och kompetens."
+  }
+  </script>
+
+  <link rel="canonical" href="https://reboot50.fragsheet.com/" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,14 +49,14 @@
 
   <!-- Header -->
   <header class="header">
-    <nav class="nav">
+    <nav class="nav" aria-label="Huvudmeny">
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="hamburger">
+      <label for="menu-toggle" class="hamburger" aria-label="Meny">
         <span></span><span></span><span></span>
       </label>
 
-      <a href="index.html" class="logo-link">
-        <img src="assets/REBOOT50-logo.png" alt="Reboot 50 logotyp" class="nav-logo">
+      <a href="index.html" class="logo-link" aria-label="Startsida Generation Reboot 50">
+        <img src="assets/REBOOT50-logo.png" alt="Logotyp för Generation Reboot 50" class="nav-logo">
       </a>
 
       <ul class="menu">
@@ -34,78 +71,82 @@
     </nav>
   </header>
 
-  <!-- Hero 1 -->
-  <section class="hero right">
-    <div class="hero-overlay">
-      <div class="hero-logo-box">
-        <img src="assets/REBOOT50-logo.png" alt="Reboot 50 logotyp">
-      </div>
-      <h1>Från stillastående till nystart</h1>
-      <p>Du har byggt, drivit, löst problem – men plötsligt verkar världen ha glömt vad du kan.<br>
-      Reboot 50 handlar om att väcka nyfikenheten igen och använda AI som turbo på erfarenheten.</p>
-      <a href="om.html" class="btn-primary">Läs om piloten</a>
-    </div>
-    <div class="hero-image gradient-right">
-      <img src="assets/hero1.png" alt="Före - stillhet">
-    </div>
-  </section>
+  <main>
 
-  <!-- Sektion 1 -->
-  <section class="section">
-    <h2>För dig som vill förstå – inte bara använda AI</h2>
-    <p>Sverige står inför en paradox.<br>
+    <!-- Hero 1 -->
+    <section class="hero right" id="intro">
+      <div class="hero-overlay">
+        <div class="hero-logo-box">
+          <img src="assets/REBOOT50-logo.png" alt="Logotyp för Reboot 50 i hero-bild">
+        </div>
+        <h1>Från stillastående till nystart</h1>
+        <p>Du har byggt, drivit, löst problem – men plötsligt verkar världen ha glömt vad du kan.<br>
+        Reboot 50 handlar om att väcka nyfikenheten igen och använda AI som turbo på erfarenheten.</p>
+        <a href="om.html" class="btn-primary">Läs om piloten</a>
+      </div>
+      <div class="hero-image gradient-right">
+        <img src="assets/hero1.png" alt="Person som blickar framåt – symbol för nystart efter 50">
+      </div>
+    </section>
+
+    <!-- Sektion 1 -->
+    <section class="section" id="paradox">
+      <h2>För dig som vill förstå – inte bara använda AI</h2>
+      <p>Sverige står inför en paradox.<br>
       Vi har aldrig haft så mycket erfarenhet i arbetskraften – och aldrig så många som står utanför.<br><br>
       Generation Reboot ger 50+ en ny brygga in i framtiden: där erfarenhet och teknik möts,
       och AI blir en förlängning av det du redan kan.</p>
-  </section>
+    </section>
 
-  <!-- Hero 2 -->
-  <section class="hero left">
-    <div class="hero-image gradient-left">
-      <img src="assets/hero2.png" alt="Lärande - samarbete">
-    </div>
-    <div class="hero-overlay">
-      <h2>Tillsammans lär vi oss nytt</h2>
-      <p>I Reboot 50 möts människor 50+ för att utforska AI, skapa idéer och återupptäcka sin skaparlust.<br><br>
-      Inga klassrum. Inga lärare. Bara nyfikenhet – och en handledare som aldrig blir trött: GPT.</p>
-      <a href="program.html" class="btn-primary">Utforska programmet</a>
-    </div>
-  </section>
+    <!-- Hero 2 -->
+    <section class="hero left" id="learning">
+      <div class="hero-image gradient-left">
+        <img src="assets/hero2.png" alt="Grupp av människor som samarbetar med AI-verktyg">
+      </div>
+      <div class="hero-overlay">
+        <h2>Tillsammans lär vi oss nytt</h2>
+        <p>I Reboot 50 möts människor 50+ för att utforska AI, skapa idéer och återupptäcka sin skaparlust.<br><br>
+        Inga klassrum. Inga lärare. Bara nyfikenhet – och en handledare som aldrig blir trött: GPT.</p>
+        <a href="program.html" class="btn-primary">Utforska programmet</a>
+      </div>
+    </section>
 
-  <!-- Sektion 2 -->
-  <section class="section bg-secondary">
-    <h2>30 dagar till nyfikenhet och kraft</h2>
-    <p>Programmet bygger på fyra veckor med stigande tempo och självförtroende:</p>
-    <ul class="program-list">
-      <li><strong>Vecka 1 – Mindshift:</strong> Små segrar och nyfikenhet.</li>
-      <li><strong>Vecka 2 – Kompetens:</strong> Bygga med GPT – text, Excel, bild, kod.</li>
-      <li><strong>Vecka 3 – Samarbete:</strong> Lös ett verkligt problem tillsammans.</li>
-      <li><strong>Vecka 4 – Transformation:</strong> Visa världen vad du skapat.</li>
-    </ul>
-    <a href="historier.html" class="btn-primary">Se deltagarnas resa</a>
-  </section>
+    <!-- Sektion 2 -->
+    <section class="section bg-secondary" id="program">
+      <h2>30 dagar till nyfikenhet och kraft</h2>
+      <p>Programmet bygger på fyra veckor med stigande tempo och självförtroende:</p>
+      <ul class="program-list">
+        <li><strong>Vecka 1 – Mindshift:</strong> Små segrar och nyfikenhet.</li>
+        <li><strong>Vecka 2 – Kompetens:</strong> Bygga med GPT – text, Excel, bild, kod.</li>
+        <li><strong>Vecka 3 – Samarbete:</strong> Lös ett verkligt problem tillsammans.</li>
+        <li><strong>Vecka 4 – Transformation:</strong> Visa världen vad du skapat.</li>
+      </ul>
+      <a href="historier.html" class="btn-primary">Se deltagarnas resa</a>
+    </section>
 
-  <!-- Hero 3 -->
-  <section class="hero right">
-    <div class="hero-overlay">
-      <h2>Erfarenhet + AI = Sveriges nya kraft</h2>
-      <p>Vi ska inte prata om omskolning – vi ska prata om uppväxling.<br><br>
-      Tänk om de som byggde industrisamhället också får vara med och bygga AI-samhället?<br>
-      Reboot 50 är deras revansch.</p>
-      <a href="kontakt.html" class="btn-primary">Delta i nästa pilot</a>
-    </div>
-    <div class="hero-image gradient-right">
-      <img src="assets/hero3.png" alt="Efter - framtidstro">
-    </div>
-  </section>
+    <!-- Hero 3 -->
+    <section class="hero right" id="future">
+      <div class="hero-overlay">
+        <h2>Erfarenhet + AI = Sveriges nya kraft</h2>
+        <p>Vi ska inte prata om omskolning – vi ska prata om uppväxling.<br><br>
+        Tänk om de som byggde industrisamhället också får vara med och bygga AI-samhället?<br>
+        Reboot 50 är deras revansch.</p>
+        <a href="kontakt.html" class="btn-primary">Delta i nästa pilot</a>
+      </div>
+      <div class="hero-image gradient-right">
+        <img src="assets/hero3.png" alt="Person med framtidstro som blickar mot ljuset">
+      </div>
+    </section>
 
-  <!-- Kontakt -->
-  <section class="section">
-    <h2>Vill du vara med?</h2>
-    <p>Vi söker samarbeten med företag, stiftelser och individer som vill bidra till framtidens arbetsliv.<br><br>
-    Kontakta oss för att delta, samarbeta eller stödja initiativet Generation Reboot.</p>
-    <a href="kontakt.html" class="btn-accent">Kontakta oss</a>
-  </section>
+    <!-- Kontakt -->
+    <section class="section" id="contact">
+      <h2>Vill du vara med?</h2>
+      <p>Vi söker samarbeten med företag, stiftelser och individer som vill bidra till framtidens arbetsliv.<br><br>
+      Kontakta oss för att delta, samarbeta eller stödja initiativet Generation Reboot.</p>
+      <a href="kontakt.html" class="btn-accent">Kontakta oss</a>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <p>&copy; 2025 Generation Reboot. Alla rättigheter förbehållna.</p>
