@@ -3,7 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt – Generation Reboot 50</title>
+
+  <title>Kontakt – Generation Reboot 50 | Frågor, samarbeten och deltagande</title>
+
+  <meta name="description" content="Kontakta Generation Reboot 50 om du vill delta i programmet, samarbeta eller stödja rörelsen. Vi hjälper 50+ att väcka nyfikenheten och kombinera erfarenhet med AI." />
+  <meta name="keywords" content="Generation Reboot, Reboot 50, kontakt, delta i programmet, samarbeta, AI och erfarenhet, livslångt lärande, revansch 50+" />
+  <meta name="author" content="Generation Reboot / DynaVentures" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://reboot50.fragsheet.com/kontakt.html" />
+  <meta property="og:title" content="Kontakt – Generation Reboot 50" />
+  <meta property="og:description" content="Vill du samarbeta, delta i programmet eller veta mer? Kontakta Generation Reboot 50 – rörelsen som hjälper 50+ att kombinera erfarenhet och AI." />
+  <meta property="og:image" content="https://reboot50.fragsheet.com/assets/og-contact.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kontakt – Generation Reboot 50" />
+  <meta name="twitter:description" content="Kontakta oss om du vill delta, samarbeta eller stödja Generation Reboot 50 – där erfarenhet möter AI." />
+  <meta name="twitter:image" content="https://reboot50.fragsheet.com/assets/og-contact.jpg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://reboot50.fragsheet.com/kontakt.html" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Kontakt – Generation Reboot 50",
+    "description": "Kontakta Generation Reboot 50 om du vill delta, samarbeta eller stödja rörelsen för 50+ och AI.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Generation Reboot 50",
+      "url": "https://reboot50.fragsheet.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://reboot50.fragsheet.com/assets/REBOOT50-logo.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "patrik@fragsheet.com",
+        "contactType": "Customer Support",
+        "areaServed": "SE",
+        "availableLanguage": ["Swedish"]
+      }
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,13 +61,13 @@
 
   <!-- Header -->
   <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="logo-link">
+    <nav class="nav" aria-label="Huvudmeny">
+      <a href="index.html" class="logo-link" aria-label="Till startsidan">
         <img src="assets/REBOOT50-logo.png" alt="Reboot 50 logotyp" class="nav-logo">
       </a>
 
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="hamburger">
+      <label for="menu-toggle" class="hamburger" aria-label="Visa meny">
         <span></span><span></span><span></span>
       </label>
 
@@ -34,40 +83,44 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero left">
-    <div class="hero-image gradient-left">
-      <img src="assets/hero3.png" alt="Kontakt – Generation Reboot">
-    </div>
-    <div class="hero-overlay">
-      <h1>📬 Kontakt</h1>
-      <p>Vill du samarbeta, delta i programmet eller bara veta mer?<br>
-      Fyll i formuläret nedan så återkommer vi inom kort.</p>
-    </div>
-  </section>
+  <main>
 
-  <!-- Kontaktformulär -->
-  <section class="section contact">
-    <div class="contact-wrapper">
-      <form class="contact-form" action="mailto:patrik@fragsheet.com" method="post" enctype="text/plain">
-        <label for="name">Namn</label>
-        <input type="text" id="name" name="Namn" placeholder="Ditt namn" required>
-
-        <label for="email">E-post</label>
-        <input type="email" id="email" name="E-post" placeholder="din@email.se" required>
-
-        <label for="message">Meddelande</label>
-        <textarea id="message" name="Meddelande" rows="6" placeholder="Skriv ditt meddelande här …" required></textarea>
-
-        <button type="submit" class="btn-primary">Skicka meddelande</button>
-      </form>
-
-      <div class="contact-info">
-        <p>📧 Eller mejla direkt till: <a href="mailto:patrik@fragsheet.com">patrik@fragsheet.com</a></p>
-        <p>💬 Du kan också boka ett samtal via <a href="https://fantastical.app/patrikhallen-k0QE/crest" target="_blank">den här länken</a>.</p>
+    <!-- Hero -->
+    <section class="hero left">
+      <div class="hero-image gradient-left">
+        <img src="assets/hero3.png" alt="Kontaktsektion med bakgrundsbild – Generation Reboot">
       </div>
-    </div>
-  </section>
+      <div class="hero-overlay">
+        <h1>📬 Kontakt</h1>
+        <p>Vill du samarbeta, delta i programmet eller bara veta mer?<br>
+        Fyll i formuläret nedan så återkommer vi inom kort.</p>
+      </div>
+    </section>
+
+    <!-- Kontaktformulär -->
+    <section class="section contact">
+      <div class="contact-wrapper">
+        <form class="contact-form" action="mailto:patrik@fragsheet.com" method="post" enctype="text/plain">
+          <label for="name">Namn</label>
+          <input type="text" id="name" name="Namn" placeholder="Ditt namn" required>
+
+          <label for="email">E-post</label>
+          <input type="email" id="email" name="E-post" placeholder="din@email.se" required>
+
+          <label for="message">Meddelande</label>
+          <textarea id="message" name="Meddelande" rows="6" placeholder="Skriv ditt meddelande här …" required></textarea>
+
+          <button type="submit" class="btn-primary">Skicka meddelande</button>
+        </form>
+
+        <div class="contact-info">
+          <p>📧 Eller mejla direkt till: <a href="mailto:patrik@fragsheet.com">patrik@fragsheet.com</a></p>
+          <p>💬 Du kan också boka ett samtal via <a href="https://fantastical.app/patrikhallen-k0QE/crest" target="_blank" rel="noopener noreferrer">den här länken</a>.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <p>&copy; 2025 Generation Reboot. Alla rättigheter förbehållna.</p>
